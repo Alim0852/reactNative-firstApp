@@ -23,15 +23,31 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="explore"
+ <Tabs.Screen
+        name="service"
         options={{
-          title: 'Explore',
+          title: 'Service',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon
+              name={focused ? 'briefcase' : 'briefcase-outline'} // Use briefcase icons for the service tab
+              color={color}
+            />
           ),
         }}
       />
+          <Tabs.Screen
+        name="about"
+        options={{
+          title: 'About',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? 'information-outline' : 'information-outline'}
+              color={color}
+            />
+          ),
+        }}
+      />
+ 
     </Tabs>
   );
 }
